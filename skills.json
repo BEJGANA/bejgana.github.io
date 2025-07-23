@@ -1,11 +1,11 @@
 [
     {
         "name": "Linux",
-        "icon": "https://img.icons8.com/external-tal-revivo-color-tal-revivo/48/external-linux-a-family-of-open-source-unix-like-operating-systems-based-on-the-linux-kernel-logo-color-tal-revivo.png"
+        "icon": "https://img.icons8.com/color/48/000000/linux.png"
     },
     {
         "name": "Windows",
-        "icon": "https://img.icons8.com/fluency/48/000000/node-js.png"
+        "icon": "https://img.icons8.com/fluency/48/000000/windows.png"
     },
     {
         "name": "IBM MQ",
@@ -13,19 +13,19 @@
     },
     {
         "name": "Docker",
-        "icon": "https://img.icons8.com/color/48/000000/redux.png"
+        "icon": "https://img.icons8.com/color/48/000000/docker.png"
     },
     {
-        "name": "kubernetes",
-        "icon": "https://img.icons8.com/color/48/000000/firebase.png"
+        "name": "Kubernetes",
+        "icon": "https://img.icons8.com/color/48/000000/kubernetes.png"
     },
     {
-        "name": "Android",
-        "icon": "https://img.icons8.com/fluency/48/000000/android-os.png"
+        "name": "Tomcat",
+        "icon": "https://img.icons8.com/color/48/000000/tomcat.png"
     },
     {
-        "name": "MaterialUI",
-        "icon": "https://img.icons8.com/color/48/000000/material-ui.png"
+        "name": "Nginx",
+        "icon": "https://img.icons8.com/color/48/000000/nginx.png"
     },
     {
         "name": "ChakraUI",
