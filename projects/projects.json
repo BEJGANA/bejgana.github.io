@@ -1,7 +1,7 @@
 [
   {
-    "name": "NotyStack Android",
-    "desc": "Fully fledged android CRUD app based on different design patterns. Built using Java, XML, SQLite, Firebase, RoomDB, MVVM.",
+    "name": "SSL l'application docker 'voting app' ",
+    "desc": "Sécuriser l'acces Web à l'application Docker Voting app",
     "image": "notystackandroid",
     "category": "android",
     "links": {
