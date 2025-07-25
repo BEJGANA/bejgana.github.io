@@ -29,3 +29,37 @@ footer {
   text-align: center;
   padding: 1rem;
 }
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+header, footer {
+  background-color: #1e90ff;
+  color: white;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+main {
+  padding: 2rem;
+}
+
+pre {
+  background-color: #272822;
+  color: #f8f8f2;
+  padding: 1rem;
+  overflow-x: auto;
+  border-radius: 5px;
+}
+
+ul {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 5px;
+  list-style-type: square;
+}
+
