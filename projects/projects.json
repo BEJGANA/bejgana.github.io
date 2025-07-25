@@ -3,7 +3,7 @@
     "name": "SSL Docker 'voting app' ",
     "desc": "Sécuriser l'acces Web à l'application Docker Voting app",
     "image": "notystackandroid",
-    "category": "android",
+    "category": "cker ",
     "links": {
       "view": "https://www.linkedin.com/posts/jigar-sable_androiddev-androidstudio-java-activity-6955224473822199808-JT0j",
       "code": "https://github.com/jigar-sable/notystack-android"
