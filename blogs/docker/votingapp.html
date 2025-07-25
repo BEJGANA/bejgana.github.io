@@ -16,7 +16,8 @@
 
       <h2> </h2>
       <p>
-        <li> Dans cet exercice, nous allons illustrer l’utilisation de Docker Compose et lancer l’application Voting App. Cette application est très utilisée pour des présentations et démos, c’est un bon exemple d’application micro-services simple.</li>
+        <li> Dans cet exercice, nous allons illustrer l’utilisation de Docker Compose et lancer l’application Voting App. </li>
+        <li> Cette application est très utilisée pour des présentations et démos, c’est un bon exemple d’application micro-services simple.</li>
       </p>
   
 
@@ -24,6 +25,18 @@
       <h2>Vue d’ensemble</h2>
 
           <p>
+
+            <p> vote-ui: front-end permettant à un utilisateur de voter entre 2 options
+ <p> * vote: back-end réceptionnant les votes </p>
+ <p> * result-ui: front-end permettant de visualiser les résultats </p>
+ <p> * result: back-end mettant à disposition les résultats </p>
+ <p> * redis: database redis dans laquelle sont stockés les votes </p>
+ <p> * worker: service qui récupère les votes depuis redis et consolide les résultats dans une database postgres </p>
+ <p> * db: database postgres dans laquelle sont stockés les résultats </p>
+       </p>
+
+
+           <p>
         <li> L’application Voting App est composée de plusieurs micro-services, ceux utilisés pour la version 2 sont les suivants:</li>
        </p>
         
