@@ -1,6 +1,6 @@
 [
   {
-    "name": "SSL l'application docker 'voting app' ",
+    "name": "SSL Docker 'voting app' ",
     "desc": "Sécuriser l'acces Web à l'application Docker Voting app",
     "image": "notystackandroid",
     "category": "android",
