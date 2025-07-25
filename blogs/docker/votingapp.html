@@ -28,14 +28,10 @@
        </p>
         
       <pre><code>
-// Fonction qui calcule la somme de deux nombres
-function addition(a, b) {
-  return a + b; // retourne le résultat
-}
-
-// Exemple d’utilisation
-let resultat = addition(5, 3); // appel de la fonction avec les valeurs 5 et 3
-console.log("Résultat :", resultat); // affichage dans la console
+mkdir VotingApp && cd VotingApp
+for project in devops vote vote-ui result result-ui worker; do
+  git clone https://gitlab.com/voting-application/$project
+done
       </code></pre>
     </section>
   </main>
