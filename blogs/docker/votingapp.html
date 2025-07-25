@@ -25,21 +25,24 @@
       <h2>Vue d’ensemble</h2>
 
            <p>
-        <li> L’application Voting App est composée de plusieurs micro-services, ceux utilisés pour la version 2 sont les suivants:</li>
+         L’application Voting App est composée de plusieurs micro-services, ceux utilisés pour la version 2 sont les suivants:</li>
        </p>
 
                 <p>
- <p> * vote-ui: front-end permettant à un utilisateur de voter entre 2 options
- <p> * vote: back-end réceptionnant les votes </p>
- <p> * result-ui: front-end permettant de visualiser les résultats </p>
- <p> * result: back-end mettant à disposition les résultats </p>
- <p> * redis: database redis dans laquelle sont stockés les votes </p>
- <p> * worker: service qui récupère les votes depuis redis et consolide les résultats dans une database postgres </p>
- <p> * db: database postgres dans laquelle sont stockés les résultats </p>
+ <p> <li>* vote-ui: front-end permettant à un utilisateur de voter entre 2 options </li> </p>
+ <p> <li>* vote: back-end réceptionnant les votes </li> </p>
+ <p> <li>* result-ui: front-end permettant de visualiser les résultats </li></p>
+ <p> <li>* result: back-end mettant à disposition les résultats </li></p>
+ <p> <li>* redis: database redis dans laquelle sont stockés les votes </li></p>
+ <p> <li>* worker: service qui récupère les votes depuis redis et consolide les résultats dans une database postgres </li></p>
+ <p> <li>* db: database postgres dans laquelle sont stockés les résultats </li></p>
        </p>
 
        <h2> Récupération des repos GitLab </h2>
-        
+
+        <p> Lancez les commandes suivantes afin de récupérer le répo de chaque microservice ainsi que celui de configuration:</p>
+
+
       <pre><code>
 mkdir VotingApp && cd VotingApp
 for project in devops vote vote-ui result result-ui worker; do
