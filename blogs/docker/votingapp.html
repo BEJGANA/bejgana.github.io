@@ -3,27 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <title>Docker Voting application</title>
-  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="../style.css">
 </head>
 <body>
   <main>
       <h2> </h2>
-      <p>
-        <li> Dans cet exercice, nous allons illustrer l’utilisation de Docker Compose et lancer l’application Voting App. </li>
-        <li> Cette application est très utilisée pour des présentations et démos, c’est un bon exemple d’application micro-services simple.</li>
-      </p>
+  
       <section>
       <h2>Vue d’ensemble</h2>
 
-           <p>
+        <p>
          L’application Voting App est composée de plusieurs micro-services, ceux utilisés pour la version 2 sont les suivants:</li>
        </p>
 
-      <div class="box">
-          <h3>Jigar's Portfolio</h3>
-          <p>Merci pour votre visite <br/> <br/> Keep Rising 🚀. Connect with me over live chat!</p>
- </div>
-                <p>
+            
  <p>  vote-ui: front-end permettant à un utilisateur de voter entre 2 options  </p>
  <p> vote: back-end réceptionnant les votes  </p>
  <p> result-ui: front-end permettant de visualiser les résultats </p>
@@ -31,19 +24,24 @@
  <p>  redis: database redis dans laquelle sont stockés les votes </p>
  <p>  worker: service qui récupère les votes depuis redis et consolide les résultats dans une database postgres </p>
  <p>  db: database postgres dans laquelle sont stockés les résultats </p>
-       </p>
+     
 
        <h2> Récupération des repos GitLab </h2>
-
-        <p> Lancez les commandes suivantes afin de récupérer le répo de chaque microservice ainsi que celui de configuration:</p>
-
+       <p> Lancez les commandes suivantes afin de récupérer le répo de chaque microservice ainsi que celui de configuration:</p>
 
       <pre><code>
-mkdir VotingApp && cd VotingApp
-for project in devops vote vote-ui result result-ui worker; do
-  git clone https://gitlab.com/voting-application/$project
-done
+mkdir voting-app
+git clone https://github.com/dockersamples/example-voting-app.git
+docker compose up -d
       </code></pre>
+
+        
+<h2> Exceuter via docker compose </h2>
+
+         <pre><code>
+docker compose up -d
+      </code></pre>
+        
     </section>
   </main>
 
