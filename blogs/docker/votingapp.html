@@ -30,17 +30,27 @@
        <p> Lancez les commandes suivantes afin de récupérer le répo de chaque microservice ainsi que celui de configuration:</p>
 
       <pre><code>
-mkdir voting-app
 git clone https://github.com/dockersamples/example-voting-app.git
-docker compose up -d
       </code></pre>
 
         
-<h2> Exceuter via docker compose </h2>
+<h2> Exécuter via docker compose </h2>
 
          <pre><code>
-docker compose up -d
+    cd example-voting-app
+    docker compose up -d
       </code></pre>
+
+   <p> le stack démmarerr avec les ports suivants</p>
+
+ <pre><code>
+  CONTAINER ID   IMAGE                       COMMAND                  CREATED          STATUS                    PORTS                                                               NAMES
+6589aabc2db3   example-voting-app-worker   "dotnet Worker.dll"      17 seconds ago   Up 9 seconds                                                                                  example-voting-app-worker-1
+819e151aa8b8   example-voting-app-vote     "python app.py"          17 seconds ago   Up 9 seconds (healthy)    0.0.0.0:8080->80/tcp, [::]:8080->80/tcp                             example-voting-app-vote-1
+73b6b3d74891   example-voting-app-result   "nodemon --inspect=0…"   17 seconds ago   Up 10 seconds             127.0.0.1:9229->9229/tcp, 0.0.0.0:8081->80/tcp, [::]:8081->80/tcp   example-voting-app-result-1
+3418d78543ea   postgres:15-alpine          "docker-entrypoint.s…"   17 seconds ago   Up 16 seconds (healthy)   5432/tcp                                                            example-voting-app-db-1
+f37781163fa1   redis:alpine                "docker-entrypoint.s…"   17 seconds ago   Up 16 seconds (healthy)   6379/tcp                                                            example-voting-app-redis-1
+</code></pre>
         
     </section>
   </main>
