@@ -51,7 +51,7 @@ main {
 pre {
   background-color: #272822;
   color: #f8f8f2;
-  padding: 1rem;
+  padding: 0.5rem;
   overflow-x: auto;
   border-radius: 5px;
   border: 2px solid #1e90ff; /* Bordure bleue autour du bloc */
