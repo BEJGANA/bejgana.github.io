@@ -7,32 +7,54 @@
 </head>
 <body>
   <header>
-    <h1>Analyse d’un script JavaScript</h1>
-    <p>Voici un exemple de code simple avec des explications étape par étape.</p>
+    <h1>Wiki Docker</h1>
+    <p>Un Wiki pour les utilisateur docker </p>
   </header>
 
   <main>
-  
 
-      <h2> </h2>
-      <ul>
-        <li> crée un container nginx  </li>
-      </ul>
-  
 
-      <section>
-      <h2>Code source :</h2>
-      <pre><code>
-// Fonction qui calcule la somme de deux nombres
-function addition(a, b) {
-  return a + b; // retourne le résultat
-}
+    <h1>Un container</h1> 
+<p>un processus
+* isole des autres processus
+* avec sa propre vision du systeme sur lequel il tourne (Namespaces)
+* limite dans les ressources qu’il peut utiliser (Control Groups)
+* Partage le Kernel de la machine hote avec les autres containers
+</p>
 
-// Exemple d’utilisation
-let resultat = addition(5, 3); // appel de la fonction avec les valeurs 5 et 3
-console.log("Résultat :", resultat); // affichage dans la console
-      </code></pre>
-    </section>
+      <h1>Namespaces</h1> 
+<p>
+
+technologie linux pour isoler un processus
+les namespaces limitent ce qu’un container peut voir
+diferents namespaces
+pid: isolation de l’espace des processus
+    net: donne une stack reseau privee
+    mount: systeme de fichiers prive
+    uts: nom du host
+    ipc: isole les communications inter processus
+    user: mapping des UID/GID entre l’hote et les containers
+  </p>
+
+
+<h1>Control Groups (cgroups)</h1> 
+<p> [à remplir] </p>
+
+
+<h1>Architecture micro-services</h1> 
+<p> Une archtecture Microservice </p>
+
+    
+<h1>Avantages </h1>
+
+    <p>
+      Decoupage de l’application en processus (services) independants
+Chacun a sa propre responsabilite metier
+Equipe dediee pour chaque service
+Plus de liberte de choix dans le langage
+Mise a jour et scaling horizontale
+Containers tres adaptes pour les micro-services
+    </p>
   </main>
 
   <footer
