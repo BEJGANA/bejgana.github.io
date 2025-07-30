@@ -48,6 +48,46 @@
     <div class="content">
      
         <p> docker </p>
+
+ <h1>Un container</h1> 
+<p>un processus </p>
+<p>* isole des autres processus</p>
+<p>* avec sa propre vision du systeme sur lequel il tourne (Namespaces)</p>
+<p>* limite dans les ressources qu’il peut utiliser (Control Groups)</p>
+<p>* Partage le Kernel de la machine hote avec les autres containers</p>
+
+      <h1>Namespaces</h1> 
+<p>technologie linux pour isoler un processus </p>
+<p>les namespaces limitent ce qu’un container peut voir</p>
+<p>diferents namespaces</p>
+<p>pid: isolation de l’espace des processus</p>
+<p>    net: donne une stack reseau privee</p>
+<p>    mount: systeme de fichiers prive</p>
+<p>    uts: nom du host</p>
+<p>    ipc: isole les communications inter processus</p>
+<p>    user: mapping des UID/GID entre l’hote et les containers</p>
+ 
+
+
+<h1>Control Groups (cgroups)</h1> 
+<p> [à remplir] </p>
+
+
+<h1>Architecture micro-services</h1> 
+<p> Une archtecture Microservice </p>
+
+    
+<h1>Avantages </h1>
+
+    <p>
+      Decoupage de l’application en processus (services) independants
+Chacun a sa propre responsabilite metier
+Equipe dediee pour chaque service
+Plus de liberte de choix dans le langage
+Mise a jour et scaling horizontale
+Containers tres adaptes pour les micro-services
+    </p>
+        
     </div>
     </div>
 </section>
