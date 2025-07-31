@@ -66,11 +66,11 @@
 <li>les namespaces limitent ce qu’un container peut voir</li>
 <li>diferents namespaces</li>
 <li>pid: isolation de l’espace des processus</li>
-<li>    *net: donne une stack reseau privee</li>
-<li>    *mount: systeme de fichiers prive</li>
-<li>    *uts: nom du host</li>
-<li>    *ipc: isole les communications inter processus</li>
-<li>    *user: mapping des UID/GID entre l’hote et les containers</li>
+<li>    - net: donne une stack reseau privee</li>
+<li>    - mount: systeme de fichiers prive</li>
+<li>    - uts: nom du host</li>
+<li>    - ipc: isole les communications inter processus</li>
+<li>    - user: mapping des UID/GID entre l’hote et les containers</li>
  </ul>
 
 
@@ -92,13 +92,38 @@
 <li>Mise a jour et scaling horizontale</li>
 <li>Containers tres adaptes pour les micro-services</li>
     </ul>
-
+    </br>
         
+<h1>Application Cloud Native:</h1>
+
+
+ <ul class="container-list">   
+     <ul class="container-list"> 
+<li>Application orientee microservices</li>
+<li>Packagee dans des containers</li>
+<li>Orchestration dynamique</li>
+<li>Nombreux projets portes par la CNCF (Cloud Native Computing Foundation)</li>
+<li> - Kubernetes</li>
+<li> - Prometheus</li>
+<li> - Fluentd</li>
+<li> - etc…</li>
+      </ul>
+
+     
     </div>
     </div>
 </section>
 
 
+
+    <h1>démmarer un container</h1>
+
+    
+ <pre><code>
+docker container run -ti python:3
+</code></pre>
+
+    
 <!-- footer section starts -->
 <section class="footer">
 
