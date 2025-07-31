@@ -51,22 +51,69 @@
  <h1>Un container</h1> 
 
 <ul class="container-list">
-  <li>un processus </li>
-  <li>isole des autres processus</li>
-  <li>avec sa propre vision du système sur lequel il tourne (Namespaces)</li>
-  <li>limité dans les ressources qu’il peut utiliser (Control Groups)</li>
-  <li>Partage le Kernel de la machine hôte avec les autres containers</li>
+  <li>vote-ui: front-end permettant à un utilisateur de voter entre 2 options </li>
+  <li>vote: back-end réceptionnant les votes</li>
+  <li>result-ui: front-end permettant de visualiser les résultats</li>
+  <li>result: back-end mettant à disposition les résultats</li>
+  <li>redis: database redis dans laquelle sont stockés les votes </li>
+  <li>worker: service qui récupère les votes depuis redis et consolide les résultats dans une database postgres </li>
+  <li>db: database postgres dans laquelle sont stockés les résultats </li>
 
         
      
-     <h1>Démmarer un container</h1>
+     <h1>Récupération des repos GitLab</h1>
+    <p> Lancez les commandes suivantes afin de récupérer le répo de chaque microservice ainsi que celui de configuration:</p>
  <pre><code>
-docker container run -ti python:3
+git clone https://github.com/dockersamples/example-voting-app.git
 </code></pre>
 
 
+<h1>Lancer le stack via docker compose</h1>
+    
+ <pre><code>
+cd example-voting-app
+    docker compose up -d</code></pre>
 
-     
+
+         <h1>Vérifier le stack</h1>
+   <p> le stack démmarerr avec les ports suivants</p>
+
+ <pre><code>
+  CONTAINER ID   IMAGE                       COMMAND                  CREATED          STATUS                    PORTS                                                               NAMES
+6589aabc2db3   example-voting-app-worker   "dotnet Worker.dll"      17 seconds ago   Up 9 seconds                                                                                  example-voting-app-worker-1
+819e151aa8b8   example-voting-app-vote     "python app.py"          17 seconds ago   Up 9 seconds (healthy)    0.0.0.0:8080->80/tcp, [::]:8080->80/tcp                             example-voting-app-vote-1
+73b6b3d74891   example-voting-app-result   "nodemon --inspect=0…"   17 seconds ago   Up 10 seconds             127.0.0.1:9229->9229/tcp, 0.0.0.0:8081->80/tcp, [::]:8081->80/tcp   example-voting-app-result-1
+3418d78543ea   postgres:15-alpine          "docker-entrypoint.s…"   17 seconds ago   Up 16 seconds (healthy)   5432/tcp                                                            example-voting-app-db-1
+f37781163fa1   redis:alpine                "docker-entrypoint.s…"   17 seconds ago   Up 16 seconds (healthy)   6379/tcp                                                            example-voting-app-redis-1
+</code></pre>
+
+     <h1>Les volumes créés </h1>
+
+   <p> Listez les volumes avec la CLI, et vérifiez que le volume défini dans le fichier compose.yml est présent.</p>
+
+ <pre><code>
+DRIVER    VOLUME NAME
+local     example-voting-app_db-data
+</code></pre>
+
+
+         <h1>Les networks créés </h1>
+
+   <p> Listez les networks avec la CLI. Les deux networks définis dans le fichier compose.yml sont présents.</p>
+
+ <pre><code>
+NETWORK ID     NAME                            DRIVER    SCOPE
+d9b9e3bdb7eb   bridge                          bridge    local
+b592dbe89792   example-voting-app_back-tier    bridge    local
+2354856c414c   example-voting-app_front-tier   bridge    local
+db08f139b9d5   host                            host      local
+510b7cc7dd08   none                            null      local
+</code></pre>
+
+         <h1>Utilisation de l’application</h1>
+   <p> Nous effectuons un choix entre les 2 options depuis l’interface de vote à l’adresse http://HOST_IP:8080 et http://HOST_IP:8081 pour la page de résultat </p>
+ <p> [IMAGE] </p>
+    
     </div>
     </div>
 </section>
