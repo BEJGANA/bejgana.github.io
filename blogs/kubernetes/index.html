@@ -1,1 +1,206 @@
-<h1>Kubernetes</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="BEJGANA sable, portfolio, BEJGANA, full stack dev, personal portfolio lifecodes, portfolio design, portfolio website, personal portfolio" />
+    <meta name="description" content="Welcome to BEJGANA's Portfolio. Full-Stack Web Developer and Android App Developer" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Favicon -->
+    <link id='favicon' rel="shortcut icon" href="../assets/images/favicon.png" type="image/x-png">
+    <title>Docker | BEJGANA</title>
+</head>
+<body oncontextmenu="return false">
+
+<!-- pre loader -->
+<!-- <div class="loader-container">
+  <img draggable="false" src="./assets/images/preloader.gif" alt="">
+</div> -->
+
+<!-- navbar starts -->
+<header>
+        <a href="/" class="logo"><i class="fab fa-node-js"></i> BEJGANA</a>
+
+        <div id="menu" class="fas fa-bars"></div>
+        <nav class="navbar">
+            <ul>
+            <li><a class="active" href="#home">Accueil</a></li>
+            <li><a href="#about">À propos de moi</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#work">Work</a></li>
+            <li><a href="#experience">Expériences professionnelles</a></li>
+            <li><a href="https://bejgana.github.io/blogs/">Blogs</a></li>
+            <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+</header>
+
+  
+<section class="about" id="about">
+    <h2 class="heading"><i class="fas fa-user-alt"></i> About <span>Me</span></h2>
+    
+    <div class="row">
+    <div class="content">
+
+        
+ <h1>Un container</h1> 
+
+<ul class="container-list">
+  <li>un processus </li>
+  <li>isole des autres processus</li>
+  <li>avec sa propre vision du système sur lequel il tourne (Namespaces)</li>
+  <li>limité dans les ressources qu’il peut utiliser (Control Groups)</li>
+  <li>Partage le Kernel de la machine hôte avec les autres containers</li>
+
+
+</ul>
+    <br>
+      <h1>Namespaces</h1> 
+<ul class="container-list">   
+    <li>technologie linux pour isoler un processus </li>
+<li>les namespaces limitent ce qu’un container peut voir</li>
+<li>diferents namespaces</li>
+<li>pid: isolation de l’espace des processus</li>
+<li>    - net: donne une stack reseau privee</li>
+<li>    - mount: systeme de fichiers prive</li>
+<li>    - uts: nom du host</li>
+<li>    - ipc: isole les communications inter processus</li>
+<li>    - user: mapping des UID/GID entre l’hote et les containers</li>
+ </ul>
+
+
+<h1>Control Groups (cgroups)</h1> 
+<p> [à remplir] </p>
+
+
+<h1>Architecture micro-services</h1> 
+<p> Une archtecture Microservice </p>
+
+    
+<h1>Avantages </h1>
+
+    <ul class="container-list">   
+<li>Decoupage de l’application en processus (services) independants</li>
+<li>Chacun a sa propre responsabilite metier</li>
+<li>Equipe dediee pour chaque service</li>
+<li>Plus de liberte de choix dans le langage</li>
+<li>Mise a jour et scaling horizontale</li>
+<li>Containers tres adaptes pour les micro-services</li>
+    </ul>
+    </br>
+        
+<h1>Application Cloud Native:</h1>
+
+
+ <ul class="container-list">   
+     <ul class="container-list"> 
+<li>Application orientee microservices</li>
+<li>Packagee dans des containers</li>
+<li>Orchestration dynamique</li>
+<li>Nombreux projets portes par la CNCF (Cloud Native Computing Foundation)</li>
+<li> - Kubernetes</li>
+<li> - Prometheus</li>
+<li> - Fluentd</li>
+<li> - etc…</li>
+      </ul>
+
+     
+     <h1>Démmarer un container</h1>
+ <pre><code>
+docker container run -ti python:3
+</code></pre>
+
+    <h1> Des stacks completes</h1>
+<p><a href="https://bejgana.github.io/blogs/docker/votingapp">1 - Voting App</a></p>
+<p>2 - Elastic (gestion des logs)</p>
+<p>3 - Vorting App with SSL</p>
+
+     
+    </div>
+    </div>
+</section>
+
+
+
+    
+
+    
+<!-- footer section starts -->
+<section class="footer">
+
+  <div class="box-container">
+
+      <div class="box">
+          <h3>Portfolio BEJGANA </h3>
+          <p>Merci pour votre visite <br/> <br/> Keep Rising 🚀. Connect with me over live chat!</p>
+      </div>
+
+      <div class="box">
+          <h3>quick links</h3>
+          <a href="#home"><i class="fas fa-chevron-circle-right"></i> home</a>
+          <a href="#about"><i class="fas fa-chevron-circle-right"></i> about</a>
+          <a href="#skills"><i class="fas fa-chevron-circle-right"></i> skills</a>
+          <a href="#education"><i class="fas fa-chevron-circle-right"></i> education</a>
+          <a href="#work"><i class="fas fa-chevron-circle-right"></i> work</a>
+          <a href="#experience"><i class="fas fa-chevron-circle-right"></i>Expériences professionnelles</a>
+      </div>
+
+      <div class="box">
+          <h3>contact info</h3>
+          <p> <i class="fas fa-envelope"></i>bejgana.don@gmail.com</p>
+          <p> <i class="fas fa-map-marked-alt"></i>Casablanca , Maroc</p>
+          <div class="share">
+
+              <a href="https://www.linkedin.com/in/jigar-sable" class="fab fa-linkedin" aria-label="LinkedIn" target="_blank"></a>
+              <a href="https://github.com/jigar-sable" class="fab fa-github" aria-label="GitHub" target="_blank"></a>
+              <a href="mailto:jigarsable21@gmail.com" class="fas fa-envelope" aria-label="Mail" target="_blank"></a>
+              <a href="https://twitter.com/jigar_sable" class="fab fa-twitter" aria-label="Twitter" target="_blank"></a>
+              <a href="https://t.me/lifecode5" class="fab fa-telegram-plane" aria-label="Telegram" target="_blank"></a>
+          </div>
+      </div>
+  </div>
+
+  <h1 class="credit">Designed with <i class="fa fa-heart pulse"></i> by <a href="https://www.linkedin.com/in/jigar-sable"> BEJGANA </a></h1>
+
+</section>
+<!-- footer section ends -->
+
+
+<!-- scroll top btn -->
+<a href="#home" aria-label="ScrollTop" class="fas fa-angle-up" id="scroll-top"></a>
+<!-- scroll back to top -->
+
+
+<!-- ==== ALL MAJOR JAVASCRIPT CDNS STARTS ==== -->
+<!-- jquery cdn -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- typed.js cdn -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.5/typed.min.js" integrity="sha512-1KbKusm/hAtkX5FScVR5G36wodIMnVd/aP04af06iyQTkD17szAMGNmxfNH+tEuFp3Og/P5G32L1qEC47CZbUQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- particle.js links -->
+<script src="../assets/js/particles.min.js"></script>
+<script src="../assets/js/app.js"></script>
+
+<!-- vanilla tilt.js links -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js" integrity="sha512-SttpKhJqONuBVxbRcuH0wezjuX+BoFoli0yPsnrAADcHsQMW8rkR84ItFHGIkPvhnlRnE2FaifDOUw+EltbuHg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- scroll reveal anim -->
+<script src="https://unpkg.com/scrollreveal"></script>
+
+<script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"
+    ></script>
+
+<!-- ==== ALL MAJOR JAVASCRIPT CDNS ENDS ==== -->
+
+<script src="../assets/js/script.js"></script>
+
+</body>
+</html>
