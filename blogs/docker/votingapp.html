@@ -48,8 +48,11 @@
     <div class="content">
 
         
- <h1>Un container</h1> 
+ <h1>Introduction</h1> 
 
+        <p>Voting-app est un stack d'application dévlopper par Docker , il est utilisé pour les présentations docker et Démos  </p>
+
+        <p> [Image architecture]</p>
 <ul class="container-list">
   <li>vote-ui: front-end permettant à un utilisateur de voter entre 2 options </li>
   <li>vote: back-end réceptionnant les votes</li>
@@ -58,6 +61,7 @@
   <li>redis: database redis dans laquelle sont stockés les votes </li>
   <li>worker: service qui récupère les votes depuis redis et consolide les résultats dans une database postgres </li>
   <li>db: database postgres dans laquelle sont stockés les résultats </li>
+</ul>
 
         
      
@@ -118,11 +122,34 @@ db08f139b9d5   host                            host      local
     </div>
 </section>
 
-
+         <h1>Scaling du service worker</h1>
+    <p>Par défaut, un container est instantié pour chaque service. Il est possible, avec la commande
+scale de changer ce comportement et de scaler un service une fois qu’il est lancé.
+Avec la commande suivante, augmenter le nombre de worker à 2 </p>
 
     
+ <pre><code>
+$ docker-compose scale worker=2
+Starting examplevotingapp_worker_1 ... done
+Creating examplevotingapp_worker_2 ...
+Creating examplevotingapp_worker_2 ... done
+</code></pre>
 
-    
+    <p>Listez les containers présent. Les 2 containers relatifs au service worker sont présent.</p>
+ <pre><code>
+$ docker-compose ps
+     [à ajouter]
+</code></pre>
+
+    <H3>Note:</H3>
+
+        <ul class="container-list">
+  <li>il n’est pas possible de scaler les services vote et result car ils spécifient tous les 2 un
+port, plusieurs containers ne peuvent pas utiliser le même port de la machine hôte </li>
+  <li>il n’est pas non plus possible de scaler les services db et redis car ils spécifient tous les 2
+l’option container_name, plusieurs containers ne peuvent pas avoir le même nom.</li>
+
+</ul>
 <!-- footer section starts -->
 <section class="footer">
 
