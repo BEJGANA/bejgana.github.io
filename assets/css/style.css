@@ -1223,3 +1223,11 @@ form .button-area {
   top: calc(100% - 12rem);
 }
 /* scroll top ends */
+
+.container-list {
+  font-size: 1.8rem; /* ou essaye 20px */
+  color: #0e2431;
+  font-weight: 500;
+  line-height: 1.7;
+  margin-top: 2rem;
+}
