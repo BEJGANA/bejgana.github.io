@@ -1231,3 +1231,13 @@ form .button-area {
   line-height: 1.7;
   margin-top: 2rem;
 }
+
+pre {
+  background-color: #272822;
+  color: #f8f8f2;
+  padding: 0.5rem;
+  overflow-x: auto;
+  border-radius: 5px;
+  border: 2px solid #1e90ff; /* Bordure bleue autour du bloc */
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1); /* Ombre douce */
+}
