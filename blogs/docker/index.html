@@ -46,12 +46,12 @@
     
     <div class="row">
     <div class="content">
-     
-        <p> docker </p>
 
+        
  <h1>Un container</h1> 
-<p>un processus </p>
+
 <ul class="container-list">
+  <li>un processus </li>
   <li>isole des autres processus</li>
   <li>avec sa propre vision du système sur lequel il tourne (Namespaces)</li>
   <li>limité dans les ressources qu’il peut utiliser (Control Groups)</li>
@@ -59,16 +59,17 @@
 </ul>
 
       <h1>Namespaces</h1> 
-<p>technologie linux pour isoler un processus </p>
-<p>les namespaces limitent ce qu’un container peut voir</p>
-<p>diferents namespaces</p>
-<p>pid: isolation de l’espace des processus</p>
-<p>    net: donne une stack reseau privee</p>
-<p>    mount: systeme de fichiers prive</p>
-<p>    uts: nom du host</p>
-<p>    ipc: isole les communications inter processus</p>
-<p>    user: mapping des UID/GID entre l’hote et les containers</p>
- 
+<ul class="container-list">   
+    <li>technologie linux pour isoler un processus </li>
+<li>les namespaces limitent ce qu’un container peut voir</li>
+<li>diferents namespaces</li>
+<li>pid: isolation de l’espace des processus</li>
+<li>    *net: donne une stack reseau privee</li>
+<li>    *mount: systeme de fichiers prive</li>
+<li>    *uts: nom du host</li>
+<li>    *ipc: isole les communications inter processus</li>
+<li>    *user: mapping des UID/GID entre l’hote et les containers</li>
+ </ul>
 
 
 <h1>Control Groups (cgroups)</h1> 
