@@ -57,68 +57,14 @@
   <li>limité dans les ressources qu’il peut utiliser (Control Groups)</li>
   <li>Partage le Kernel de la machine hôte avec les autres containers</li>
 
-
-</ul>
-    <br>
-      <h1>Namespaces</h1> 
-<ul class="container-list">   
-    <li>technologie linux pour isoler un processus </li>
-<li>les namespaces limitent ce qu’un container peut voir</li>
-<li>diferents namespaces</li>
-<li>pid: isolation de l’espace des processus</li>
-<li>    - net: donne une stack reseau privee</li>
-<li>    - mount: systeme de fichiers prive</li>
-<li>    - uts: nom du host</li>
-<li>    - ipc: isole les communications inter processus</li>
-<li>    - user: mapping des UID/GID entre l’hote et les containers</li>
- </ul>
-
-
-<h1>Control Groups (cgroups)</h1> 
-<p> [à remplir] </p>
-
-
-<h1>Architecture micro-services</h1> 
-<p> Une archtecture Microservice </p>
-
-    
-<h1>Avantages </h1>
-
-    <ul class="container-list">   
-<li>Decoupage de l’application en processus (services) independants</li>
-<li>Chacun a sa propre responsabilite metier</li>
-<li>Equipe dediee pour chaque service</li>
-<li>Plus de liberte de choix dans le langage</li>
-<li>Mise a jour et scaling horizontale</li>
-<li>Containers tres adaptes pour les micro-services</li>
-    </ul>
-    </br>
         
-<h1>Application Cloud Native:</h1>
-
-
- <ul class="container-list">   
-     <ul class="container-list"> 
-<li>Application orientee microservices</li>
-<li>Packagee dans des containers</li>
-<li>Orchestration dynamique</li>
-<li>Nombreux projets portes par la CNCF (Cloud Native Computing Foundation)</li>
-<li> - Kubernetes</li>
-<li> - Prometheus</li>
-<li> - Fluentd</li>
-<li> - etc…</li>
-      </ul>
-
      
      <h1>Démmarer un container</h1>
  <pre><code>
 docker container run -ti python:3
 </code></pre>
 
-    <h1> Des stacks completes</h1>
-<p><a href="https://bejgana.github.io/blogs/docker/votingapp">1 - Voting App</a></p>
-<p>2 - Elastic (gestion des logs)</p>
-<p>3 - Vorting App with SSL</p>
+
 
      
     </div>
