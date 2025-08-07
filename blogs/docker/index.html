@@ -120,7 +120,7 @@ docker container run -ti python:3
      <p># -t alloue un pseudo TTY et -i garde STDIN ouvert </p>
 
  <h1>Differentes editions</h1>
-     <h2>Docker Community Edition (CE):</h2>
+     <h4>Docker Community Edition (CE):</h4>
  <ul class="container-list"> 
 <li>open source</li>
 <li>release stable tous les 6 mois (a partir de la 18.09)</li>
@@ -129,7 +129,7 @@ docker container run -ti python:3
 </ul>
 
 
-    <h2>Docker Entreprise Edition (EE):</h2>
+    <h4>Docker Entreprise Edition (EE):</h4>
  <ul class="container-list"> 
 <li>3 tiers (basic, standard, avance)</li>
 <li>une release tous les trimestres avec 1an de support</li>
@@ -137,7 +137,29 @@ docker container run -ti python:3
 <li>release nightly</li>
 </ul>
 
-     
+         <h4>Quelques commandes: </h4>
+
+<p>Affiche les containers</p>
+      <pre><code>
+docker ps [ou docker container ls]
+</code></pre>
+
+<p>Démmarer/ arrêter le service docker</p>
+      <pre><code>
+sudo systemctl status docker
+sudo systemctl stop docker
+sudo systemctl start docker
+     </code></pre>
+
+ <pre><code>
+     docker kill
+ </code></pre>
+
+<h4> Foreground vs Background </h4>
+<p>Container lance en foreground par defaut</p>
+<p>Option “-d” pour lancer en background</p>
+<p>L’identifiant du container lance en background est retourne “ID</p>
+
     <h1> Des stacks completes</h1>
 <p><a href="https://bejgana.github.io/blogs/docker/votingapp">1 - Voting App</a></p>
 <p>2 - Elastic (gestion des logs)</p>
