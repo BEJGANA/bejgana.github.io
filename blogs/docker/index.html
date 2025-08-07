@@ -150,16 +150,55 @@ sudo systemctl status docker
 sudo systemctl stop docker
 sudo systemctl start docker
      </code></pre>
+     
+<p> Arrêter un container</p>
 
  <pre><code>
      docker kill
  </code></pre>
 
+     <p> La publication de port</p>
+   <pre><code>
+$docker container run -d -p 8080:80 nginx
+
+</code></pre>
+
+     
 <h4> Foreground vs Background </h4>
 <p>Container lance en foreground par defaut</p>
 <p>Option “-d” pour lancer en background</p>
 <p>L’identifiant du container lance en background est retourne “ID</p>
 
+
+    <h1> Les images</h1>
+     
+    <h1> Dockerfile</h1>
+
+     fichier texte
+<p>Serie d’instructions pour construire le systeme de fichier d’une image</p>
+<p>Flow standard</p>
+<p> - specification d’une image de base</p>
+<p> - ajout des dependances</p>
+<p> - ajout du code applicatif</p>
+<p> - definition de la commande a lancer</p>
+
+
+   <h4>   Les instructions principales</h4>
+
+<p>
+FROM: image de base
+ENV: definition de variables d’environnement
+RUN: execution d’une commande, construction du filesystem de l’image
+COPY / ADD: copie de ressources depuis la machine local dans le filesystem de l’image
+EXPOSE: expose un port de l’application
+HEALTHCHECK: verifie l’etat de sante de l’application
+VOLUME: definition d’un volume pour la gestion des donnees
+WORKDIR: definition du repertoire de travail
+USER: utilisateur auquel appartient le processus du container
+ENTRYPOINT / CMD: definie la commande executee au lancement du container
+     </p>
+
+     
     <h1> Des stacks completes</h1>
 <p><a href="https://bejgana.github.io/blogs/docker/votingapp">1 - Voting App</a></p>
 <p>2 - Elastic (gestion des logs)</p>
