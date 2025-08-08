@@ -50,16 +50,47 @@
         <h2 class="heading">DOCKER </h2>
        
 <h1>Introduction</h1>
-<h4>Un container</h4> 
+<h2>1-1 Un container</h2> 
 <ul class="container-list">
   <li>un processus </li>
   <li>isole des autres processus</li>
   <li>avec sa propre vision du système sur lequel il tourne (Namespaces)</li>
   <li>limité dans les ressources qu’il peut utiliser (Control Groups)</li>
   <li>Partage le Kernel de la machine hôte avec les autres containers</li>
-
 </ul>
 
+    <h1>1-2 Namespaces</h1> 
+<ul class="container-list">   
+    <li>technologie linux pour isoler un processus </li>
+<li>les namespaces limitent ce qu’un container peut voir</li>
+<li>diferents namespaces</li>
+<li>pid: isolation de l’espace des processus</li>
+<li>    - net: donne une stack reseau privee</li>
+<li>    - mount: systeme de fichiers prive</li>
+<li>    - uts: nom du host</li>
+<li>    - ipc: isole les communications inter processus</li>
+<li>    - user: mapping des UID/GID entre l’hote et les containers</li>
+ </ul>
+
+    <h1>1-3 Architecture micro-services </h1> 
+<p>[Image 1]</p>
+<p>[Image 2]</p>
+      <h3> Ses avantages: </h3>
+        <ul class="container-list">   
+    <li> Decoupage de l’application en processus (services) independants</li>
+<li>Chacun a sa propre responsabilite metier</li>
+<li>Equipe dediee pour chaque service</li>
+<li>Plus de liberte de choix dans le langage</li>
+<li>Mise a jour et scaling horizontale </li>
+<li> Containers tres adaptes pour les micro-services</li>
+ </ul>
+
+     <h3> inconvenient: </h3>
+      <ul class="container-list">   
+    <li> Necessite des interfaces bien definies (API HTTP REST)</li>
+    <li>Focus sur les tests d’integration </li>
+    <li> Deplace la complexite dans l’orchestration de l’application globale (Docker Swarm, Kubernetes)</li>
+ </ul>
         
 <h1>La plateforne Docker</h1>
 <h1>La plateforne Docker</h1>
