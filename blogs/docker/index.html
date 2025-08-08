@@ -118,7 +118,7 @@ docker container run -ti python:3
      <p># l'interpreteur est package dans l'image "python" en version ou plutot de tag "3"</p>
      <p> # le flag "-ti" permet l'interactivite avec le processus du container</p>
      <p># -t alloue un pseudo TTY et -i garde STDIN ouvert </p>
-
+        </br>
  <h1>Differentes editions</h1>
      <h4>Docker Community Edition (CE):</h4>
  <ul class="container-list"> 
@@ -168,9 +168,9 @@ $docker container run -d -p 8080:80 nginx
 <p>Container lance en foreground par defaut</p>
 <p>Option “-d” pour lancer en background</p>
 <p>L’identifiant du container lance en background est retourne “ID</p>
+ 
 
-
-    <h1> Les images</h1>
+     <h1> Les images</h1>
      
     <h1> Dockerfile</h1>
 
@@ -185,19 +185,21 @@ $docker container run -d -p 8080:80 nginx
 
    <h4>   Les instructions principales</h4>
 
-<p>
-FROM: image de base
-ENV: definition de variables d’environnement
-RUN: execution d’une commande, construction du filesystem de l’image
-COPY / ADD: copie de ressources depuis la machine local dans le filesystem de l’image
-EXPOSE: expose un port de l’application
-HEALTHCHECK: verifie l’etat de sante de l’application
-VOLUME: definition d’un volume pour la gestion des donnees
-WORKDIR: definition du repertoire de travail
-USER: utilisateur auquel appartient le processus du container
-ENTRYPOINT / CMD: definie la commande executee au lancement du container
-     </p>
 
+
+    <ul class="container-list"> 
+<li>FROM: image de base</li>
+<li>ENV: definition de variables d’environnement</li>
+<li>RUN: execution d’une commande, construction du filesystem de l’image</li>
+<li>COPY / ADD: copie de ressources depuis la machine local dans le filesystem de l’image</li>
+<li>EXPOSE: expose un port de l’application</li>
+<li>HEALTHCHECK: verifie l’etat de sante de l’application</li>
+<li>VOLUME: definition d’un volume pour la gestion des donnees</li>
+<li>WORKDIR: definition du repertoire de travail</li>
+<li>USER: utilisateur auquel appartient le processus du container</li>
+<li>ENTRYPOINT / CMD: definie la commande executee au lancement du container
+</li>
+</ul>
      
     <h1> Des stacks completes</h1>
 <p><a href="https://bejgana.github.io/blogs/docker/votingapp">1 - Voting App</a></p>
