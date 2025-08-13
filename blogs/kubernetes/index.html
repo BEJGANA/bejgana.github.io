@@ -110,6 +110,29 @@
 <h3>3- Mise en place</h3>
 <p><a href="https://bejgana.github.io/blogs/kubernetes/Minikube.pdf">Minikube</a></p>
 
+<h3>4-Probes </h3>
+  <p>  Nous commençons par la création du premier /Pod/container </p>
+
+
+        <p>podinfo.yaml</p>
+         <pre><code>
+apiVersion: v1
+kind: Pod
+metadata:
+  name: podinfo
+spec:
+  containers:
+  - image: stefanprodan/podinfo
+    name: podinfo
+         </code></pre>
+<p>Lancer la commande : </p>
+
+
+    <pre><code>
+    kubectl apply -f podinfo.yaml
+   </code></pre>
+
+        
 <p>Les commandes de base</p>
      <p>kubectl version --short</p>   
 <h3>Les images Docker </h3>
