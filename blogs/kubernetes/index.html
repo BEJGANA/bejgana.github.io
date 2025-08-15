@@ -124,11 +124,11 @@
         
   <p> 3 ressource sont crée, deployment + replica  + pod  </p>
 
-        <p>notre application :
-        - kubectl run crée  un "deployment", deploy/pingpong
-        - Ce "deployment" à une replica set, rs/pingpong-xxxx
-        - ce "replica set" crée un pod, po/pingpong-yyyy
-        </p>
+        <p>notre application : </p>
+         <p>- kubectl run crée  un "deployment", deploy/pingpong </p>
+        <p> - Ce "deployment" à une replica set, rs/pingpong-xxxx </p>
+        <p> - ce "replica set" crée un pod, po/pingpong-yyyy </p>
+       
         
         <p>Pour afficher le log de ce container , il suffit de lancer </p>
         
@@ -150,25 +150,60 @@
 --since : afficher les logs depuis une durré spécifique
 </p>
         
-<h3>Démmarer le premier container via un fichier YAML </h3>
+<h3>d </h3>
         <p>podinfo.yaml</p>
          <pre><code>
-apiVersion: v1
-kind: Pod
+apiVersion: v1             
+kind: Pod                  
 metadata:
-  name: podinfo
+  name: whoami
 spec:
   containers:
-  - image: stefanprodan/podinfo
-    name: podinfo
+  - name: whoami
+    image: containous/whoami
          </code></pre>
 <p>Lancer la commande : </p>
 
 
     <pre><code>
-    kubectl apply -f podinfo.yaml
+ $ kubectl apply -f whoami.yaml
    </code></pre>
 
+<p>Vérification : </p>
+    <pre><code>
+$ kubectl get pods
+   </code></pre>
+
+
+        <p>Accès à l’application via un port-forward </p>
+  <pre><code>
+$ kubectl port-forward whoami 8888:80
+   </code></pre>
+
+<p>via l'application un Browser </p>
+
+        <p>[Image]</p>
+
+     <p>Suppresion de Pod </p>
+
+          <pre><code>
+$ kubectl delete po/whoami
+   </code></pre>
+
+    <p> Details du Pod </p>
+  <pre><code>
+$ kubectl describe pod whoami
+   </code></pre>
+        
+  <pre><code>
+$ kubectl get pods
+   </code></pre>
+
+        
+        
+          <pre><code>
+ $ kubectl apply -f whoami.yaml
+   </code></pre>
         
 <p>Les commandes de base</p>
      <p>kubectl version --short</p>   
