@@ -110,9 +110,27 @@
 <h3>3- Mise en place</h3>
 <p><a href="https://bejgana.github.io/blogs/kubernetes/Minikube.pdf">Minikube</a></p>
 
-<h3>4-Probes </h3>
-  <p>  Nous commençons par la création du premier /Pod/container </p>
+<h3>Démmarer le premier container </h3>
+  <p> Nous allons démmarer un container nommé pingpong qui est basé sur l'image alpine</p>
+<pre><code>
+   $ kubectl run pingpong --image alpine ping 8.8.8.8
+   </code></pre>
 
+  <p> Pour afficher les informations relative à ce container , il suffit de lancer la commande suivante: </p>
+
+<pre><code>
+   $ kubectl get all
+   </code></pre>
+        
+  <p> 3 ressource sont crée, deployment + replica  + pod  </p>
+
+        <p>notre application :
+        - kubectl run crée  un "deployment", deploy/pingpong
+        - Ce "deployment" à une replica set, rs/pingpong-xxxx
+        - ce "replica set" crée un pod, po/pingpong-yyyy
+        </p>
+
+        
 
         <p>podinfo.yaml</p>
          <pre><code>
