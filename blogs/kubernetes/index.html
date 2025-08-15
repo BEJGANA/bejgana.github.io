@@ -144,13 +144,12 @@
     [resultat]
    </code></pre>
         
-<p>
--f/--follow : pour afficher les log en temps réel
---tail : Afficher le nombre des ligne
---since : afficher les logs depuis une durré spécifique
-</p>
+<p>-f/--follow : pour afficher les log en temps réel</p>
+<p>--tail : Afficher le nombre des ligne</p>
+<p> --since : afficher les logs depuis une durré spécifique</p>
+
         
-<h3>d </h3>
+<h3>Démmarer un container via fichier YAML (1) </h3>
         <p>podinfo.yaml</p>
          <pre><code>
 apiVersion: v1             
@@ -190,6 +189,7 @@ $ kubectl port-forward whoami 8888:80
 $ kubectl delete po/whoami
    </code></pre>
 
+        
     <p> Details du Pod </p>
   <pre><code>
 $ kubectl describe pod whoami
@@ -199,12 +199,15 @@ $ kubectl describe pod whoami
 $ kubectl get pods
    </code></pre>
 
+        <p>Accès à l’application via un port-forward</p>
         
         
           <pre><code>
- $ kubectl apply -f whoami.yaml
+$  kubectl port-forward whoami 8888:80
    </code></pre>
-        
+
+
+    <p>via le browser , acces au service [image]</p>
 <p>Les commandes de base</p>
      <p>kubectl version --short</p>   
 <h3>Les images Docker </h3>
