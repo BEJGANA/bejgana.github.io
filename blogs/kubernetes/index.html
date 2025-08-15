@@ -129,9 +129,28 @@
         - Ce "deployment" à une replica set, rs/pingpong-xxxx
         - ce "replica set" crée un pod, po/pingpong-yyyy
         </p>
-
         
+        <p>Pour afficher le log de ce container , il suffit de lancer </p>
+        
+           <pre><code>
+    $ kubectl logs deploy/pingpong
+   </code></pre>
 
+
+        <p>Pour crée d'autre copie, il suffit d'ajouter le parametre "scale" </p>
+
+            <pre><code>
+    $ kubectl scale deploy/pingpong --replicas 8
+    [resultat]
+   </code></pre>
+        
+<p>
+-f/--follow : pour afficher les log en temps réel
+--tail : Afficher le nombre des ligne
+--since : afficher les logs depuis une durré spécifique
+</p>
+        
+<h3>Démmarer le premier container via un fichier YAML </h3>
         <p>podinfo.yaml</p>
          <pre><code>
 apiVersion: v1
