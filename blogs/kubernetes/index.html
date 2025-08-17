@@ -120,6 +120,10 @@
 
 <pre><code>
    $ kubectl get all
+    NAME           READY   STATUS              RESTARTS   AGE
+pod/pingpong   0/1     ContainerCreating   0          5s
+NAME                 TYPE        CLUSTER-IP   EXTERNAL-IP   PORT(S)   AGE
+service/kubernetes   ClusterIP   10.96.0.1    <none>        443/TCP   4d3h
    </code></pre>
         
   <p> 3 ressource sont crée, deployment + replica  + pod  </p>
@@ -133,17 +137,15 @@
         <p>Pour afficher le log de ce container , il suffit de lancer </p>
         
            <pre><code>
-    $ kubectl logs deploy/pingpong
+    $ kubectl logs pod/pingpong
+PING 8.8.8.8 (8.8.8.8): 56 data bytes
+64 bytes from 8.8.8.8: seq=0 ttl=114 time=23.047 ms
+64 bytes from 8.8.8.8: seq=1 ttl=114 time=22.819 ms
+64 bytes from 8.8.8.8: seq=2 ttl=114 time=22.509 ms
+64 bytes from 8.8.8.8: seq=3 ttl=114 time=22.117 ms
    </code></pre>
 
 
-        <p>Pour crée d'autre copie, il suffit d'ajouter le parametre "scale" </p>
-
-            <pre><code>
-    $ kubectl scale deploy/pingpong --replicas 8
-    [resultat]
-   </code></pre>
-        
 <p>-f/--follow : pour afficher les log en temps réel</p>
 <p>--tail : Afficher le nombre des ligne</p>
 <p> --since : afficher les logs depuis une durré spécifique</p>
@@ -163,9 +165,8 @@ spec:
          </code></pre>
 <p>Lancer la commande : </p>
 
-
     <pre><code>
- $ kubectl apply -f whoami.yaml
+ $ kubectl apply -f podinfo.yaml
    </code></pre>
 
 <p>Vérification : </p>
@@ -179,10 +180,31 @@ $ kubectl get pods
 $ kubectl port-forward whoami 8888:80
    </code></pre>
 
-<p>via l'application un Browser </p>
+<p>via un autre consolen ,essayer la commande </p>
+        
+  <pre><code>
+[abdou@localhost ~]$ curl localhost:8888
+Hostname: whoami
+IP: 127.0.0.1
+IP: ::1
+IP: 10.244.3.5
+IP: fe80::d879:caff:fe6d:2f83
+RemoteAddr: 127.0.0.1:37628
+GET / HTTP/1.1
+Host: localhost:8888
+User-Agent: curl/7.76.1
+Accept: */*
+ </code></pre>
 
-        <p>[Image]</p>
 
+        <p>Pour crée d'autre copie, il suffit d'ajouter le parametre "scale" </p>
+
+        <pre><code>
+    $ kubectl scale xxx/xxx --replicas 8
+    [not work]
+   </code></pre>
+
+        
      <p>Suppresion de Pod </p>
 
           <pre><code>
