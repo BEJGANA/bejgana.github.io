@@ -1,0 +1,30 @@
+3 type of Autoscaling 
+	Reactive : Scale according to Workload
+	Scheduled : Schedule autoscaling of ressource at specific time
+	Predictive: Scale with AI / Machine Learning
+	
+	
+Vertical Scaling: like add/remove memory/CPU to the Hardware
+Horizontal Scaling: addition or remove  more VM 
+
+
+Cluster AutoScaler : A tool that automatically adjusts the size of a Kubernetes
+cluster when there are pods that fail to run
+
+
+Horizontal and Vertical Pod Autoscaler:
+HPA , Horizontal : scales the number of replicas of an application 
+VPA , Vertical : scales the resource requests and limits of a pod
+
+
+
+
+KEDA : Event Driven Autoscaling
+	It is a event driven solution that makes use of ScaledObjetcsts
+	
+	
+	
+##################
+#   Serverless   #
+##################
+
