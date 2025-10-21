@@ -1,30 +1,19 @@
-3 type of Autoscaling 
-	Reactive : Scale according to Workload
-	Scheduled : Schedule autoscaling of ressource at specific time
-	Predictive: Scale with AI / Machine Learning
-	
-	
-Vertical Scaling: like add/remove memory/CPU to the Hardware
-Horizontal Scaling: addition or remove  more VM 
-
-
-Cluster AutoScaler : A tool that automatically adjusts the size of a Kubernetes
-cluster when there are pods that fail to run
-
-
-Horizontal and Vertical Pod Autoscaler:
-HPA , Horizontal : scales the number of replicas of an application 
-VPA , Vertical : scales the resource requests and limits of a pod
+How can CloudEvents be used according to the CloudEvents specification? (Section 02 - Serverless)
+-Agnostically across various services, platforms, and systems
 
 
 
+What is the CNCF's mission? (Section 02 - Community and Governance)
+to make cloud native computing ubiquitous
 
-KEDA : Event Driven Autoscaling
-	It is a event driven solution that makes use of ScaledObjetcsts
-	
-	
-	
-##################
-#   Serverless   #
-##################
+
+The "Crossing the Chasm" concept in the CNCF project maturity model represents which transition? (Section 02 - Community and Governance)
+-From incubated to graduated
+
+
+What is the role of the Technical Oversight Committee (TOC) in the CNCF? 
+The correct answer is 'To evaluate the maturity of CNCF projects'. 
+
+
+
 
