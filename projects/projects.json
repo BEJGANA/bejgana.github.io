@@ -20,7 +20,7 @@
     }
   },
   {
-    "name": "Application web sur Kubernetes (2)",
+    "name": "Application web sur Kubernetes (3)",
     "desc": "Native android app built using Java, XML. Retrofit & Glide dependencies. Provides different category news.",
     "image": "newsboxandroid",
     "category": "android",
@@ -30,3 +30,4 @@
     }
   }
 ]
+
