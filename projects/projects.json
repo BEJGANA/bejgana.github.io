@@ -1,7 +1,7 @@
 [
   {
-    "name": "NotyStack Android",
-    "desc": "Fully fledged android CRUD app based on different design patterns. Built using Java, XML, SQLite, Firebase, RoomDB, MVVM.",
+    "name": "Déployer une application Nginx sur Kubernetes",
+    "desc": "Déployer une application Nginx sur Kubernetes",
     "image": "notystackandroid",
     "category": "android",
     "links": {
@@ -10,8 +10,8 @@
     }
   },
   {
-    "name": "SPPU Engg Prep",
-    "desc": "All in one SPPU Engineering resources. Built using Java, XML and Firebase.",
+    "name": "Autoscaling avec HPA (Horizontal Pod Autoscaler)",
+    "desc": "Autoscaling avec HPA (Horizontal Pod Autoscaler)",
     "image": "sppuprepandroid",
     "category": "android",
     "links": {
@@ -20,8 +20,8 @@
     }
   },
   {
-    "name": "NewsBox Android",
-    "desc": "Native android app built using Java, XML. Retrofit & Glide dependencies. Provides different category news.",
+    "name": "exposer l’appli proprement en HTTPS",
+    "desc": "exposer l’appli proprement en HTTPS",
     "image": "newsboxandroid",
     "category": "android",
     "links": {
@@ -340,3 +340,4 @@
     }
   }
 ]
+
