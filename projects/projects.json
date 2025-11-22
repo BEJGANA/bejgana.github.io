@@ -3,7 +3,7 @@
     "name": "Déployer une application Nginx sur Kubernetes",
     "desc": "Déployer une application Nginx sur Kubernetes",
     "image": "notystackandroid",
-    "category": "android",
+    "category": "mern",
     "links": {
       "view": "https://www.linkedin.com/posts/jigar-sable_androiddev-androidstudio-java-activity-6955224473822199808-JT0j",
       "code": "https://github.com/jigar-sable/notystack-android"
@@ -13,7 +13,7 @@
     "name": "Autoscaling avec HPA (Horizontal Pod Autoscaler)",
     "desc": "Autoscaling avec HPA (Horizontal Pod Autoscaler)",
     "image": "sppuprepandroid",
-    "category": "android",
+    "category": "mern",
     "links": {
       "view": "https://www.linkedin.com/posts/jigar-sable_androiddev-androidstudio-java-activity-6955224473822199808-JT0j",
       "code": "https://github.com/jigar-sable/sppu-prep-android"
@@ -310,5 +310,6 @@
     }
   }
 ]
+
 
 
