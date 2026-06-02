@@ -14,3 +14,4 @@ git clone https://github.com/TiPunchLabs/ckad-dojo.git
 cd ckad-dojo
 systemctl start docker
 ./scripts/ckad-setup.sh -e ckad-simulation4
+https://uklabs.kodekloud.com/topic/mock-exam-1-4/
